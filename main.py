@@ -28,7 +28,7 @@ class BrawlhallaMacro:
                     {"key": "wait", "frames": 25},  # mesmo timing do dlight->recovery
                     {"key": "space", "frames": 2},  # jump
                     {"key": "d", "hold": True},  # right
-                    {"key": "wait", "frames": 3},   # pequena espera antes do sair
+                    {"key": "wait", "frames": 5},   # aumentado tempo de espera antes do sair
                     {"key": "c", "frames": 2}    # light attack (sair)
                 ],
                 "DLight -> Recovery": [
@@ -41,22 +41,24 @@ class BrawlhallaMacro:
                 ]
             },
             "Axe": {
-                "DLight -> NAir": [
-                    {"key": "s", "hold": True},  # down
-                    {"key": "c", "frames": 2},   # light attack (dlight)
-                    {"key": "s", "hold": False}, # soltar down
-                    {"key": "wait", "frames": 25},  # esperar animação do dlight
+                "SLight -> SAir": [
+                    {"key": "d", "hold": True},  # right
+                    {"key": "c", "frames": 2},   # light attack (slight)
+                    {"key": "d", "hold": False}, # soltar direita
+                    {"key": "wait", "frames": 20},  # tempo de espera do slight
                     {"key": "space", "frames": 2},  # jump
-                    {"key": "wait", "frames": 5},   # esperar subir no pulo
+                    {"key": "wait", "frames": 5},   # aumentado tempo de espera antes do sair
                     {"key": "w", "hold": True},   # pressiona cima
-                    {"key": "c", "frames": 2},    # light attack (nair)
-                    {"key": "w", "hold": False}   # solta cima
+                    {"key": "d", "hold": True},   # pressiona direita
+                    {"key": "c", "frames": 2},    # light attack (sair)
+                    {"key": "w", "hold": False},  # solta cima
+                    {"key": "d", "hold": False}   # solta direita
                 ],
                 "SLight -> NAir": [
                     {"key": "d", "hold": True},  # right
                     {"key": "c", "frames": 2},   # light attack (slight)
                     {"key": "d", "hold": False}, # soltar direita
-                    {"key": "wait", "frames": 25},  # esperar animação do slight
+                    {"key": "wait", "frames": 20},  # reduzido 2 frames do tempo de espera do slight
                     {"key": "space", "frames": 2},  # jump
                     {"key": "wait", "frames": 5},   # esperar subir no pulo
                     {"key": "w", "hold": True},   # pressiona cima
